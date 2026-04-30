@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <button id="darkModeToggle" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:scale-110 transition-transform">
+        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+        <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+    </button>
+
+    <button id="backToTop" class="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="toastContainer" class="fixed top-4 left-4 z-50 flex flex-col gap-2"></div>
+
+    <nav class="bg-white dark:bg-gray-800 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-xl font-bold text-blue-600 dark:text-blue-400">🌍 Country Explorer</a>
+            <div class="flex gap-4">
+                <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="countries.html" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Countries</a>
+                <a href="about.html" class="text-blue-600 dark:text-blue-400 font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="font-heading text-4xl font-bold text-center mb-12">About Country Explorer</h1>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="font-heading text-2xl font-bold mb-4">About This Website</h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                    Country Explorer is a comprehensive web application designed to help users discover and explore detailed information about every country in the world. Built with modern web technologies, it provides an intuitive interface to search, filter, and view country data including population, languages, currencies, and geographical information.
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Our mission is to make global information accessible and interactive. Whether you're a student researching countries, a traveler planning your next destination, or just curious about the world, Country Explorer provides all the data you need in one place. The application uses real-time data from the REST Countries API to ensure accuracy and completeness.
+                </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="font-heading text-2xl font-bold mb-4">About the Developer</h2>
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center text-white text-2xl font-bold">CE</div>
+                    <div>
+                        <h3 class="font-heading text-xl font-semibold">Country Explorer Team</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Full Stack Developer</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    A passionate web developer with expertise in modern frontend technologies. This project showcases the ability to build responsive, interactive web applications with clean code and excellent user experience.
+                </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="font-heading text-2xl font-bold mb-6">Technologies Used</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fab fa-html5 text-orange-500 text-2xl"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fab fa-css3-alt text-blue-500 text-2xl"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fab fa-js text-yellow-500 text-2xl"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fas fa-wind text-teal-500 text-2xl"></i>
+                        <span>TailwindCSS</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fas fa-map text-green-500 text-2xl"></i>
+                        <span>Leaflet.js</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fas fa-chart-bar text-purple-500 text-2xl"></i>
+                        <span>Chart.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8">
+                <h2 class="font-heading text-2xl font-bold mb-4">API Documentation</h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">This application uses the REST Countries API v3.1 to fetch country data.</p>
+                <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <p class="font-mono text-sm mb-2"><strong>Endpoint:</strong> https://restcountries.com/v3.1/all</p>
+                    <p class="font-mono text-sm mb-2"><strong>Method:</strong> GET</p>
+                    <p class="font-mono text-sm"><strong>Data:</strong> All countries with detailed information</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+                <h2 class="font-heading text-2xl font-bold mb-6">Contact</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-envelope text-blue-600 dark:text-blue-400 text-xl w-8"></i>
+                        <span>contact@countryexplorer.com</span>
+                    </div>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                            <i class="fab fa-github text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                            <i class="fab fa-twitter text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                            <i class="fab fa-linkedin text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-gray-800 py-8 border-t dark:border-gray-700">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 dark:text-gray-400">&copy; 2026 Country Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
